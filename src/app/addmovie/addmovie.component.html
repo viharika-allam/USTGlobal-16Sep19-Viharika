@@ -1,0 +1,30 @@
+<div class="card card-body col-md-6 offset-3 mt-4 mb-4">
+    <form action="" [formGroup]="form" (ngSubmit)="login(form)">
+        <p class="text-center bg-dark text-white mt-4 mb-4 col-md-12" id="re">Reactive form</p>
+        <div class="form-group">
+    <input type="text" name="addmovie" id="addmovie"  class ="form-control" placeholder="Add Movie" formControlName="addmovie">
+    <div *ngIf="addmovie.touched && addmovie.invalid">
+        <p class ="alert alert-danger" *ngIf ="addmovie.errors.required">this field is required</p>
+    </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="movietitle" id="movietitle" class ="form-control" placeholder="Movie Title" formControlName="movietitle">
+            <div *ngIf="movietitle.touched && movietitle.invalid">
+                <p class ="alert alert-danger" *ngIf ="movietitle.errors.required">this field is required</p>
+            </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="movieimgurl" id="movieimgurl" class ="form-control" placeholder="Movie img Url" formControlName="movieimgurl">
+                    <div *ngIf="movieimgurl.touched && movieimgurl.invalid">
+                        <p class ="alert alert-danger" *ngIf ="movieimgurl.errors.required">this field is required</p>
+                    </div>
+                        </div>
+                 <div class="form-group">
+               <input type="text" name="moviedescription" id="moviedescription" class ="form-control" placeholder="Movie Description" formControlName="moviedescription">
+                <div *ngIf="moviedescription.touched && moviedescription.invalid">
+                 <p class ="alert alert-danger" *ngIf ="moviedescription.errors.required">this field is required</p>
+                  </div>
+                    </div>  
+                 <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add</button>         
+    </form>
+</div>
