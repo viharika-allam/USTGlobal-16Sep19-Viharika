@@ -1,4 +1,0 @@
-27,Ankitha,100000,F
-28,Manu,10000,F
-29,Danis,10000,M
-30,Sonakshi,200000,M
