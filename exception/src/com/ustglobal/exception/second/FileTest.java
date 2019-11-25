@@ -1,0 +1,19 @@
+package com.ustglobal.exception.second;
+
+import java.io.File;
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class FileTest {
+	
+	void open() throws  ClassNotFoundException ,SQLException, IOException  {
+		File f = new File("b.txt");
+		f.createNewFile();
+		
+		Class.forName("com.a");
+		
+		
+		
+	}
+
+}
