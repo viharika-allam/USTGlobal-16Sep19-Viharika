@@ -1,0 +1,32 @@
+package com.ustglobal.springrest.controller;
+
+
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ustglobal.springrest.dto.EmployeeBean;
+
+@RestController
+public class EmployeeController {
+	
+	public boolean addEmployee(EmployeeBean bean) {
+		return false;
+	}//end of addEmployee
+	
+	public boolean modifyEmployee(EmployeeBean bean) {
+		return false;
+	}//end of modifyEmployee
+	
+	public boolean deleteEmployee(int id) {
+		return false;
+	}//end of deleteEmployee
+	
+	public EmployeeBean getEmployee(int id) {
+		return null;
+	}//end of getEmployee
+	
+	public EmployeeBean getAllEmployee() {
+		return null;
+	}//end of getAllEmployee
+
+}
