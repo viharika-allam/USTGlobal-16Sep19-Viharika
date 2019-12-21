@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var person = {
+        firstName : 'Viha',
+        lastName : 'Reddy',
+        age : 22,
+        getFullName : function(){
+            return this.firstName+''+this.lastName
+        }
+    }
+    var firstName = person.firstName
+    console.log('FirstName',firstName);
+    var lastName = person.lastName
+    console.log('LastName',lastName);
+    var fullName = person.getFullName()
+    console.log('FullName',fullName);
+        
+       var person = new Object();
+       person. name = 'Viha';
+       person. age = 22;
+       person. color = 'White';
+       person.getFullName=function(){
+           return this.name+''+this.age
+       }
+       var name = person.name
+       console.log('Name',name);
+       var age = person.age
+       console.log('Age',age);
+       var fullName = person.getFullName()
+       console.log('FullName',fullName);
+
+        var persons = ['Viha','Aruna','Inna']
+        console.log('Persons=',persons);
+        console.log('Persons=',persons[0])
+        console.log('Persons=',persons.length);
+
+        var persons = Array(2)
+        persons[0] ='Viha';
+        persons[1] = 'Inna';
+        console.log('Persons=',persons);
+        console.log('Persons=',persons[1])
+        console.log('Persons=',persons.length)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>

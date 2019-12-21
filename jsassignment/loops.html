@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fact(num){
+            var fact=1
+            for(i=1;i<=num;i++){
+                fact*=i;
+            }
+            return fact
+        }
+        console.log(fact(6))
+     </script>
+     <script>
+     var fact=function(num){
+         var fact=1
+         for(i=1;i<=num;i++){
+             fact*=i
+         }
+         return fact
+     }
+     console.log(fact(4))
+     </script>
+     <script>
+     (function(num){
+         var fact=1
+         for(i=1;i<=num;i++){
+         fact*=i
+         }
+         console.log(fact)
+     })
+     (3)
+     </script>
+     <script>
+     var div1=num=>{
+         var fact=1
+         for(i=1;i<=num;i++){
+             fact*=i
+         }
+         console.log(fact)
+}
+div1(5)
+</script>
+</body>
+</html>

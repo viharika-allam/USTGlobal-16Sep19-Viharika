@@ -1,0 +1,84 @@
+function myFunction() {
+    var x = document.getElementById("Password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+}
+
+
+function Validations() 
+{
+    var em = document.getElementById("Email").value;
+    var gen = document.Farm.gender.value;
+    var phno = document.getElementById("Number").value;
+    var ch = document.getElementById("Name").value;
+    var pasw = document.getElementById("Password").value;
+    var sel = document.Farm.country.value;
+    
+   // ^\d{10}$
+
+    function Validateu(phno){
+        var ph = /^([+][9][1]|[9][1]|[0]){0,1}([6-9]{1})([0-9]{9})$/;
+
+        if( phno.match(ph))
+        {
+            return true;
+        }
+      
+    }
+
+    function emailu(em){
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(em))
+        {
+            return true;
+        }
+
+    }
+
+    function CheckPassword(pasw) 
+    { 
+        var decimal=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,20}$/;
+        if(pasw.match(decimal)) 
+        { 
+        return true;
+        }
+
+    } 
+
+    if(ch == ""){
+        document.getElementById("Name").focus();
+        alert ("Enter Your Name");
+        return false;
+    }
+    else if (gen =="" || gen == null){
+        alert ("Select A Gender");
+        return false;
+    }
+    else if (Validateu (phno) != true){
+        alert ("Invalid PhoneNumber");
+        document.getElementById("Number").focus();
+        return false;
+
+
+    }
+    else if (emailu(em) != true){
+        alert ("Invalid Email");       
+        document.getElementById("Email").focus();
+        return false;
+
+    }
+    else if (CheckPassword(pasw) != true){
+        alert("Password Should Contain One Uppercase, One Lowercase, One Special Charater, One Digit And 8-20 Characters. ");
+        document.getElementById("Password").focus();
+        return false;
+    }
+    else if ( sel == "Select"){
+        alert("Please Select A Country");
+        return false;
+    }
+  
+
+
+}
